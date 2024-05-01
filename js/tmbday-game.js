@@ -1,14 +1,14 @@
 import MainScene from "./MainScene.js";
 
 const config = {
-  width: 512,
-  height: 512,
+  width: 256,
+  height: 256,
   backgroundColor: '#999999',
   type: Phaser.AUTO,
   parent: 'tmbday-game',
   scene: [MainScene],
   scale: {
-    zoom: 2,
+    zoom: 3,
   },
   physics: {
     default: 'matter',
