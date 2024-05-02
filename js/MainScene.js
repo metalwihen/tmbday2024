@@ -23,7 +23,7 @@ export default class MainScene extends Phaser.Scene {
     layer1.setCollisionByProperty({ collide: true });
     this.matter.world.convertTilemapLayer(layer1);
 
-    this.player = new Player({ scene: this, x: 240, y: 180, texture: 'player_lily', frame: 'cat_sleep_1' })
+    this.player = new Player({ scene: this, x: 50, y: 125, texture: 'player_lily', frame: 'cat_sleep_1' })
     this.player.inputKeys = this.input.keyboard.addKeys({
       up: Phaser.Input.Keyboard.KeyCodes.W,
       down: Phaser.Input.Keyboard.KeyCodes.S,
@@ -31,7 +31,36 @@ export default class MainScene extends Phaser.Scene {
       right: Phaser.Input.Keyboard.KeyCodes.D,
     })
 
-    this.addObjectToMap({x: 50, y: 50, objectKey: "img_fish_bowl"});
+    // Bathroom
+    this.addObjectToMap({x: 110, y: 90, objectKey: "bath_tub"});
+    this.addObjectToMap({x: 105, y: 110, objectKey: "toilet_side"});
+    this.addObjectToMap({x: 145, y: 90, objectKey: "sink"});
+
+    // Kitchen
+    this.addObjectToMap({x: 200, y: 150, objectKey: "kitchen_counter"});
+    this.addObjectToMap({x: 105, y: 160, objectKey: "fridge"});
+    this.addObjectToMap({x: 170, y: 210, objectKey: "rug"});
+
+    // Drawing
+    this.addObjectToMap({x: 80, y: 26, objectKey: "book_shelves"});
+    this.addObjectToMap({x: 170, y: 45, objectKey: "sofa_big"});
+    this.addObjectToMap({x: 200, y: 58, objectKey: "sofa_s_back"})
+    this.addObjectToMap({x: 240, y: 18, objectKey: "sofa_s_front"})
+    this.addObjectToMap({x: 210, y: 18, objectKey: "coffee_table"})
+
+    // Bathroom Hallway
+    this.addObjectToMap({x: 240, y: 110, objectKey: "iron_table"});
+    this.addObjectToMap({x: 200, y: 85, objectKey: "shelf"});
+
+    // Dining
+    this.addObjectToMap({x: 50, y: 200, objectKey: "table"});
+    this.addObjectToMap({x: 40, y: 165, objectKey: "chair_front"});
+    this.addObjectToMap({x: 60, y: 165, objectKey: "chair_front"});
+    this.addObjectToMap({x: 40, y: 220, objectKey: "chair_back"});
+    this.addObjectToMap({x: 60, y: 220, objectKey: "chair_back"});
+
+    // Dining Hallway
+   this.addObjectToMap({x: 60, y: 100, objectKey: "record_player"});
   }
 
   update() {

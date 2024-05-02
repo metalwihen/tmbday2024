@@ -1,7 +1,7 @@
 {
     "frames": [
         {
-            "filename": "img_kitchen_counter",
+            "filename": "kitchen_counter",
             "frame": {
                 "w": 112,
                 "h": 48,
@@ -14,7 +14,7 @@
             }
         },
         {
-            "filename": "img_book_shelves",
+            "filename": "book_shelves",
             "frame": {
                 "w": 112,
                 "h": 48,
@@ -27,7 +27,7 @@
             }
         },
         {
-            "filename": "img_fridge",
+            "filename": "fridge",
             "frame": {
                 "w": 32,
                 "h": 64,
@@ -40,7 +40,7 @@
             }
         },
         {
-            "filename": "img_sofa_big",
+            "filename": "sofa_big",
             "frame": {
                 "w": 32,
                 "h": 64,
@@ -53,7 +53,7 @@
             }
         },
         {
-            "filename": "img_bath_tub",
+            "filename": "bath_tub",
             "frame": {
                 "w": 48,
                 "h": 32,
@@ -66,7 +66,7 @@
             }
         },
         {
-            "filename": "img_table",
+            "filename": "table",
             "frame": {
                 "w": 48,
                 "h": 32,
@@ -79,7 +79,7 @@
             }
         },
         {
-            "filename": "img_book_shelf",
+            "filename": "book_shelf",
             "frame": {
                 "w": 48,
                 "h": 32,
@@ -92,7 +92,7 @@
             }
         },
         {
-            "filename": "img_rug",
+            "filename": "rug",
             "frame": {
                 "w": 48,
                 "h": 32,
@@ -105,7 +105,7 @@
             }
         },
         {
-            "filename": "img_sofa_s_back",
+            "filename": "sofa_s_back",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -118,7 +118,7 @@
             }
         },
         {
-            "filename": "img_sofa_s_front",
+            "filename": "sofa_s_front",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -131,7 +131,7 @@
             }
         },
         {
-            "filename": "img_coffee_table",
+            "filename": "coffee_table",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -144,7 +144,7 @@
             }
         },
         {
-            "filename": "img_shelf",
+            "filename": "shelf",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -157,7 +157,7 @@
             }
         },
         {
-            "filename": "img_iron_table",
+            "filename": "iron_table",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -170,7 +170,7 @@
             }
         },
         {
-            "filename": "img_sink",
+            "filename": "sink",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -183,7 +183,7 @@
             }
         },
         {
-            "filename": "img_toilet",
+            "filename": "toilet",
             "frame": {
                 "w": 16,
                 "h": 32,
@@ -196,7 +196,7 @@
             }
         },
         {
-            "filename": "img_toilet_side",
+            "filename": "toilet_side",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -209,7 +209,7 @@
             }
         },
         {
-            "filename": "img_record_player",
+            "filename": "record_player",
             "frame": {
                 "w": 32,
                 "h": 32,
@@ -222,7 +222,7 @@
             }
         },
         {
-            "filename": "img_chair_front",
+            "filename": "chair_front",
             "frame": {
                 "w": 16,
                 "h": 32,
@@ -235,7 +235,7 @@
             }
         },
         {
-            "filename": "img_chair_side",
+            "filename": "chair_side",
             "frame": {
                 "w": 16,
                 "h": 32,
@@ -248,7 +248,7 @@
             }
         },
         {
-            "filename": "img_chair_back",
+            "filename": "chair_back",
             "frame": {
                 "w": 16,
                 "h": 32,
@@ -261,7 +261,7 @@
             }
         },
         {
-            "filename": "img_small_cupboard",
+            "filename": "small_cupboard",
             "frame": {
                 "w": 16,
                 "h": 32,
@@ -274,7 +274,7 @@
             }
         },
         {
-            "filename": "img_bone",
+            "filename": "bone",
             "frame": {
                 "w": 16,
                 "h": 16,
@@ -287,7 +287,7 @@
             }
         },
         {
-            "filename": "img_clock",
+            "filename": "clock",
             "frame": {
                 "w": 16,
                 "h": 16,
@@ -300,7 +300,7 @@
             }
         },
         {
-            "filename": "img_fish_bowl",
+            "filename": "fish_bowl",
             "frame": {
                 "w": 16,
                 "h": 16,
@@ -313,7 +313,7 @@
             }
         },
         {
-            "filename": "img_coffee_cup",
+            "filename": "coffee_cup",
             "frame": {
                 "w": 16,
                 "h": 16,
@@ -326,7 +326,7 @@
             }
         },
         {
-            "filename": "img_duck",
+            "filename": "duck",
             "frame": {
                 "w": 16,
                 "h": 16,
@@ -339,7 +339,7 @@
             }
         },
         {
-            "filename": "img_plant_pot",
+            "filename": "plant_pot",
             "frame": {
                 "w": 16,
                 "h": 16,
@@ -352,7 +352,7 @@
             }
         },
         {
-            "filename": "img_plant_pot2",
+            "filename": "plant_pot2",
             "frame": {
                 "w": 16,
                 "h": 16,
