@@ -11,7 +11,7 @@
  "layers":[
         {
          "compression":"",
-         "data":"FAAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFwAAADgAAAA6AAAAOgAAADoAAAApAAAAHAAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB8AAAA4AAAAJwAAACcAAAAoAAAAKQAAAC4AAAAvAAAALwAAAEEAAABBAAAAQQAAAEEAAAAvAAAALwAAAC8AAABDAAAAOAAAADkAAAA5AAAAOgAAADoAAABUAAAAVAAAAFQAAABTAAAAQQAAAEEAAABUAAAAUwAAAC8AAABUAAAAVQAAACYAAABLAAAASwAAAEwAAABNAAAAKgAAACsAAAArAAAALQAAAC4AAABDAAAAKgAAACsAAAArAAAALAAAAC0AAAA4AAAAXAAAAF0AAABeAAAAXQAAACsAAAArAAAAKwAAAC0AAABSAAAAVQAAACoAAAArAAAAKwAAACwAAAAtAAAAOAAAAG4AAABvAAAAcAAAAHEAAAAqAAAAKwAAACsAAAAsAAAAGQAAABkAAAAsAAAALAAAACsAAAArAAAALQAAADgAAACAAAAAbwAAAIIAAACDAAAAKgAAACsAAAArAAAALAAAACwAAAAsAAAAKwAAACsAAAArAAAAKwAAAC0AAAA4AAAAYAAAAHQAAABhAAAAYQAAAGIAAABhAAAAYgAAAGkAAABqAAAAagAAAGkAAABpAAAAaQAAAGoAAABrAAAAOAAAAHIAAABzAAAAcwAAAHMAAAB0AAAAdAAAAHUAAAB6AAAAewAAAHsAAAB7AAAAewAAAHsAAACNAAAAjwAAADgAAAByAAAAcwAAAHMAAAB0AAAAdAAAAHMAAAB1AAAARAAAAEUAAABFAAAARQAAAEUAAABHAAAAJwAAACkAAAA4AAAAcgAAAHMAAABzAAAAcwAAAHMAAAB0AAAAdQAAAHoAAABFAAAARQAAAEUAAABFAAAAfQAAACcAAAApAAAAOAAAAHIAAAB0AAAAdAAAAHQAAABzAAAAcwAAAHUAAAB6AAAARQAAAEUAAABFAAAARQAAAH0AAAAnAAAAKQAAADgAAACEAAAAhgAAAIYAAACGAAAAhgAAAIYAAACHAAAAegAAAEUAAABFAAAARQAAAHwAAAB9AAAAJwAAACkAAAA4AAAAFQAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAAIwAAACNAAAAjQAAAI0AAACNAAAAjwAAACcAAAApAAAASgAAAEsAAABLAAAASwAAAEsAAABLAAAASwAAAEsAAABLAAAASwAAAEsAAABLAAAASwAAAEsAAABLAAAATQAAAA==",
+         "data":"FAAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFQAAABUAAAAVAAAAFwAAADgAAAA6AAAAOgAAADoAAAApAAAAHAAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB0AAAAdAAAAHQAAAB8AAAA4AAAAJwAAACcAAAAoAAAAKQAAAC4AAAAvAAAALwAAAEEAAABBAAAAQQAAAEEAAAAvAAAALwAAAC8AAABDAAAAOAAAADkAAAA5AAAAOgAAADoAAABUAAAAVAAAAFQAAABTAAAAQQAAAEEAAABUAAAAUwAAAC8AAABUAAAAVQAAACYAAABLAAAASwAAAEwAAABNAAAAYAAAAGEAAABhAAAAYwAAAC4AAABDAAAAYAAAAGEAAABzAAAAYQAAAGMAAAA4AAAAXAAAAF0AAABeAAAAXQAAAHMAAABzAAAAcwAAAHUAAABSAAAAVQAAAHIAAABzAAAAcwAAAHMAAAB1AAAAOAAAAG4AAABvAAAAcAAAAHEAAAByAAAAcwAAAHMAAABzAAAAcwAAAHMAAABzAAAAcwAAAHMAAABzAAAAdQAAADgAAACAAAAAbwAAAIIAAACDAAAAhAAAAIUAAACFAAAAhQAAAIUAAACFAAAAhQAAAIUAAACFAAAAhQAAAIcAAAA4AAAAYAAAAHQAAABhAAAAYQAAAGIAAABhAAAAYgAAAGkAAABqAAAAagAAAGkAAABpAAAAaQAAAGoAAABrAAAAOAAAAHIAAABzAAAAcwAAAHMAAAB0AAAAdAAAAHUAAAB6AAAAewAAAHsAAAB7AAAAewAAAHsAAACNAAAAjwAAADgAAAByAAAAcwAAAHMAAAB0AAAAdAAAAHMAAAB1AAAARAAAAEUAAABFAAAARQAAAEUAAABHAAAAJwAAACkAAAA4AAAAcgAAAHMAAABzAAAAcwAAAHMAAAB0AAAAdQAAAHoAAABFAAAARQAAAEUAAABFAAAAfQAAACcAAAApAAAAOAAAAHIAAAB0AAAAdAAAAHQAAABzAAAAcwAAAHUAAAB6AAAARQAAAEUAAABFAAAARQAAAH0AAAAnAAAAKQAAADgAAACEAAAAhgAAAIYAAACGAAAAhgAAAIYAAACHAAAAegAAAEUAAABFAAAARQAAAHwAAAB9AAAAJwAAACkAAAA4AAAAFQAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAAIwAAACNAAAAjQAAAI0AAACNAAAAjwAAACcAAAApAAAASgAAAEsAAABLAAAASwAAAEsAAABLAAAASwAAAEsAAABLAAAASwAAAEsAAABLAAAASwAAAEsAAABLAAAATQAAAA==",
          "encoding":"base64",
          "height":16,
          "id":1,
@@ -365,7 +365,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -470,7 +469,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -513,7 +511,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -618,7 +615,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -661,7 +657,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -767,7 +762,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -828,7 +822,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -891,7 +884,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -923,7 +915,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -955,7 +946,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -987,7 +977,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1019,7 +1008,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1051,7 +1039,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1164,7 +1151,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1196,7 +1182,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1228,7 +1213,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1260,7 +1244,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1292,7 +1275,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1324,7 +1306,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1374,7 +1355,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1479,7 +1459,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1522,7 +1501,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1573,7 +1551,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1605,7 +1582,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1648,7 +1624,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1680,7 +1655,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1712,7 +1686,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1755,7 +1728,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1798,7 +1770,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1830,7 +1801,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1862,7 +1832,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -1923,7 +1892,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2039,7 +2007,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2082,7 +2049,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2188,7 +2154,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2231,7 +2196,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2336,7 +2300,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2379,7 +2342,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2484,7 +2446,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2545,7 +2506,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2577,7 +2537,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2609,7 +2568,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2642,7 +2600,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2674,7 +2631,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2706,7 +2662,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2738,7 +2693,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2779,7 +2733,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2829,7 +2782,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2872,7 +2824,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2904,7 +2855,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2936,7 +2886,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -2979,7 +2928,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3022,7 +2970,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3054,7 +3001,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3086,7 +3032,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3130,7 +3075,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3173,7 +3117,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3205,7 +3148,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3237,7 +3179,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3280,7 +3221,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3323,7 +3263,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3355,7 +3294,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3387,7 +3325,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -3599,6 +3536,19 @@
                 }],
          "tilewidth":16,
          "transparentcolor":"#000000"
+        }, 
+        {
+         "columns":18,
+         "firstgid":163,
+         "image":"TopDownHouse_FloorsAndWalls.png",
+         "imageheight":144,
+         "imagewidth":288,
+         "margin":0,
+         "name":"TopDownHouse_FloorsAndWalls",
+         "spacing":0,
+         "tilecount":162,
+         "tileheight":16,
+         "tilewidth":16
         }],
  "tilewidth":16,
  "type":"map",

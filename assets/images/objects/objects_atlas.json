@@ -1,0 +1,372 @@
+{
+    "frames": [
+        {
+            "filename": "img_kitchen_counter",
+            "frame": {
+                "w": 112,
+                "h": 48,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_book_shelves",
+            "frame": {
+                "w": 112,
+                "h": 48,
+                "x": 0,
+                "y": 48
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_fridge",
+            "frame": {
+                "w": 32,
+                "h": 64,
+                "x": 0,
+                "y": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_sofa_big",
+            "frame": {
+                "w": 32,
+                "h": 64,
+                "x": 32,
+                "y": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_bath_tub",
+            "frame": {
+                "w": 48,
+                "h": 32,
+                "x": 64,
+                "y": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_table",
+            "frame": {
+                "w": 48,
+                "h": 32,
+                "x": 64,
+                "y": 128
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_book_shelf",
+            "frame": {
+                "w": 48,
+                "h": 32,
+                "x": 112,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_rug",
+            "frame": {
+                "w": 48,
+                "h": 32,
+                "x": 112,
+                "y": 32
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_sofa_s_back",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 112,
+                "y": 64
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_sofa_s_front",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 112,
+                "y": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_coffee_table",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 112,
+                "y": 128
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_shelf",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 160,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_iron_table",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 160,
+                "y": 32
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_sink",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 144,
+                "y": 64
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_toilet",
+            "frame": {
+                "w": 16,
+                "h": 32,
+                "x": 176,
+                "y": 64
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_toilet_side",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 144,
+                "y": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_record_player",
+            "frame": {
+                "w": 32,
+                "h": 32,
+                "x": 144,
+                "y": 128
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_chair_front",
+            "frame": {
+                "w": 16,
+                "h": 32,
+                "x": 176,
+                "y": 96
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_chair_side",
+            "frame": {
+                "w": 16,
+                "h": 32,
+                "x": 176,
+                "y": 128
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_chair_back",
+            "frame": {
+                "w": 16,
+                "h": 32,
+                "x": 0,
+                "y": 160
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_small_cupboard",
+            "frame": {
+                "w": 16,
+                "h": 32,
+                "x": 16,
+                "y": 160
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_bone",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 32,
+                "y": 160
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_clock",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 32,
+                "y": 176
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_fish_bowl",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 48,
+                "y": 160
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_coffee_cup",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 48,
+                "y": 176
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_duck",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 64,
+                "y": 160
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_plant_pot",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 64,
+                "y": 176
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "img_plant_pot2",
+            "frame": {
+                "w": 16,
+                "h": 16,
+                "x": 80,
+                "y": 160
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}
