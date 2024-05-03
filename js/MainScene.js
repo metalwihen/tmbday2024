@@ -52,7 +52,6 @@ export default class MainScene extends Phaser.Scene {
 
   update() {
     console.log("update");
-    this.mapObjects.update(this);
     if (!this.speech.isShowing() && !this.speechQueue.isEmpty) {
       this.speech.show(this.speechQueue.dequeue());
     }
@@ -64,8 +63,14 @@ export default class MainScene extends Phaser.Scene {
     this.matterCollision.addOnCollideStart({
       objectA: [playerCollider],
       callback: other => {
-        if (other.bodyB.label.startsWith("map_object")) {
+        let otherObjectLabel= other.bodyB.label;
+        if (otherObjectLabel.startsWith("map_object")) {
           console.log("START COLLISION" + other.bodyB.label);
+          if(otherObjectLabel== "map_object_fish_bowl"){
+            let otherObject = this.mapObjects.getObjectMap().get("map_object_fish_bowl");
+            console.log(otherObject);
+            otherObject.setPosition(180, 220);
+          }
         }
       },
       context: this,

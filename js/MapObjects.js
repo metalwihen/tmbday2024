@@ -2,13 +2,17 @@
 export default class MapObjects {
 
     constructor() {
+        this.objectMap = new Map();
     }
 
     static preload(scene) {
         scene.load.image('tiles', 'assets/images/map/TopDownHouse_FloorsAndWalls.png');
         scene.load.tilemapTiledJSON('map', 'assets/images/map/cat-dimension.json');
         scene.load.atlas('objects', 'assets/images/objects/objects.png', 'assets/images/objects/objects_atlas.json');
+    }
 
+    getObjectMap() {
+        return this.objectMap;
     }
 
     create(scene) {
@@ -39,7 +43,7 @@ export default class MapObjects {
         this.addObjectToMap(scene, { x: 200, y: 58, collide: true, objectKey: "sofa_s_back" })
         this.addObjectToMap(scene, { x: 240, y: 18, collide: true, objectKey: "sofa_s_front" })
         this.addObjectToMap(scene, { x: 210, y: 18, collide: true, objectKey: "coffee_table" })
-        this.addObjectToMap(scene, { x: 209, y: 15, collide: true, objectKey: "fish_bowl" , detectPlayerCollision: true})
+        this.addObjectToMap(scene, { x: 209, y: 15, collide: true, objectKey: "fish_bowl" })
 
         // Bathroom Hallway
         this.addObjectToMap(scene, { x: 240, y: 110, collide: true, objectKey: "iron_table" });
@@ -54,14 +58,12 @@ export default class MapObjects {
 
         // Dining Hallway
         this.addObjectToMap(scene, { x: 60, y: 100, collide: true, objectKey: "record_player" });
+
+        console.log(this.objectMap);
     }
 
     getTileLayer() {
         return this.layer1;
-    }
-
-    update(scene) {
-
     }
 
     addObjectToMap(scene, info) {
@@ -69,13 +71,15 @@ export default class MapObjects {
         let object = new Phaser.Physics.Matter.Sprite(scene.matter.world, x, y, 'objects', objectKey);
         if (!collide) {
             object.setCollisionCategory(null);
-        } else if(detectPlayerCollision){
-            const { Bodies } = Phaser.Physics.Matter.Matter;
-            var collider = Bodies.circle(x, y, 20, { isSensor: false, label: objectKey });
-            object.setExistingBody(collider);
+        } else {
+            // const { Bodies } = Phaser.Physics.Matter.Matter;
+            // var collider = Bodies.circle(x, y, 16, { isSensor: true, label: objectKey });
+            // object.setExistingBody(collider);
+            let key = 'map_object_' + objectKey;
+            object.body.label = key;
+            this.objectMap.set(key, object);
         }
         object.setStatic(true);
-        object.body.label = 'map_object_' + objectKey
         scene.add.existing(object);
     }
 }
