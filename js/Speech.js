@@ -69,7 +69,7 @@ export default class Speech {
     }
 
     playSound() {
-        return; // TODO: Remove after development
+        // return; // TODO: Remove after development
         let random = Math.floor(Math.random() * 3);
         switch(random){
             case 0: this.meow1.play(); break;

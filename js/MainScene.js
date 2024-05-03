@@ -28,37 +28,37 @@ export default class MainScene extends Phaser.Scene {
     this.matter.world.convertTilemapLayer(layer1);
 
     // Bathroom
-    this.addObjectToMap({ x: 110, y: 90, objectKey: "bath_tub" });
-    this.addObjectToMap({ x: 105, y: 110, objectKey: "toilet_side" });
-    this.addObjectToMap({ x: 145, y: 90, objectKey: "sink" });
-    this.addObjectToMap({ x: 115, y: 85, objectKey: "duck" });
+    this.addObjectToMap({ x: 110, y: 90, collide: true, objectKey: "bath_tub" });
+    this.addObjectToMap({ x: 105, y: 110, collide: true, objectKey: "toilet_side" });
+    this.addObjectToMap({ x: 145, y: 90, collide: true, objectKey: "sink" });
+    this.addObjectToMap({ x: 115, y: 85, collide: true, objectKey: "duck" });
 
     // Kitchen
-    this.addObjectToMap({ x: 200, y: 150, objectKey: "kitchen_counter" });
-    this.addObjectToMap({ x: 105, y: 160, objectKey: "fridge" });
-    this.addObjectToMap({ x: 170, y: 210, objectKey: "rug" });
+    this.addObjectToMap({ x: 200, y: 150, collide: true, objectKey: "kitchen_counter" });
+    this.addObjectToMap({ x: 105, y: 160, collide: true, objectKey: "fridge" });
+    this.addObjectToMap({ x: 170, y: 210, collide: false, objectKey: "rug" });
 
     // Drawing
-    this.addObjectToMap({ x: 80, y: 26, objectKey: "book_shelves" });
-    this.addObjectToMap({ x: 170, y: 45, objectKey: "sofa_big" });
-    this.addObjectToMap({ x: 200, y: 58, objectKey: "sofa_s_back" })
-    this.addObjectToMap({ x: 240, y: 18, objectKey: "sofa_s_front" })
-    this.addObjectToMap({ x: 210, y: 18, objectKey: "coffee_table" })
-    this.addObjectToMap({ x: 209, y: 15, objectKey: "fish_bowl" })
+    this.addObjectToMap({ x: 80, y: 26, collide: true, objectKey: "book_shelves" });
+    this.addObjectToMap({ x: 170, y: 45, collide: true, objectKey: "sofa_big" });
+    this.addObjectToMap({ x: 200, y: 58, collide: true, objectKey: "sofa_s_back" })
+    this.addObjectToMap({ x: 240, y: 18, collide: true, objectKey: "sofa_s_front" })
+    this.addObjectToMap({ x: 210, y: 18, collide: true, objectKey: "coffee_table" })
+    this.addObjectToMap({ x: 209, y: 15, collide: true, objectKey: "fish_bowl" })
 
     // Bathroom Hallway
-    this.addObjectToMap({ x: 240, y: 110, objectKey: "iron_table" });
-    this.addObjectToMap({ x: 200, y: 85, objectKey: "shelf" });
+    this.addObjectToMap({ x: 240, y: 110, collide: true, objectKey: "iron_table" });
+    this.addObjectToMap({ x: 200, y: 85, collide: true, objectKey: "shelf" });
 
     // Dining
-    this.addObjectToMap({ x: 50, y: 200, objectKey: "table" });
-    this.addObjectToMap({ x: 40, y: 165, objectKey: "chair_front" });
-    this.addObjectToMap({ x: 60, y: 165, objectKey: "chair_front" });
-    this.addObjectToMap({ x: 40, y: 220, objectKey: "chair_back" });
-    this.addObjectToMap({ x: 60, y: 220, objectKey: "chair_back" });
+    this.addObjectToMap({ x: 50, y: 200, collide: true, objectKey: "table" });
+    this.addObjectToMap({ x: 40, y: 165, collide: true, objectKey: "chair_front" });
+    this.addObjectToMap({ x: 60, y: 165, collide: true, objectKey: "chair_front" });
+    this.addObjectToMap({ x: 40, y: 220, collide: true, objectKey: "chair_back" });
+    this.addObjectToMap({ x: 60, y: 220, collide: true, objectKey: "chair_back" });
 
     // Dining Hallway
-    this.addObjectToMap({ x: 60, y: 100, objectKey: "record_player" });
+    this.addObjectToMap({ x: 60, y: 100, collide: true, objectKey: "record_player" });
 
     // Player
     this.player = new Player({ scene: this, x: 8, y: 5, texture: 'player_lily', frame: 'cat_sleep_1' })
@@ -95,10 +95,13 @@ export default class MainScene extends Phaser.Scene {
   }
 
   addObjectToMap(info) {
-    let { x, y, objectKey } = info
+    let { x, y, collide, objectKey} = info
     let object = new Phaser.Physics.Matter.Sprite(this.matter.world, x, y, 'objects', objectKey);
     object.setStatic(true);
     this.add.existing(object);
+    if (!collide) {
+      object.setCollisionCategory(null);
+    }
   }
 }
 
