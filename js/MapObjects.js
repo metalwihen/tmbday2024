@@ -15,8 +15,8 @@ export default class MapObjects {
         scene.load.atlas('objects', 'assets/images/objects/objects.png', 'assets/images/objects/objects_atlas.json');
 
         // Duck
-        scene.load.atlas('duck', 'assets/images/objects/duck.png', 'assets/images/objects/duck_atlas.json');
-        scene.load.animation('duck_anim', 'assets/images/objects/duck_anim.json');
+        scene.load.atlas('goose', 'assets/images/objects/goose.png', 'assets/images/objects/goose_atlas.json');
+        scene.load.animation('goose_anim', 'assets/images/objects/goose_anim.json');
     }
 
     getObjectMap() {
@@ -68,13 +68,13 @@ export default class MapObjects {
         this.addObjectToMap(scene, { x: 60, y: 100, collide: true, objectKey: "record_player" });
 
         // Duck
-        let duck_object = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'duck', '2');
-        let duck_key = 'map_object_duck';
-        duck_object.body.label = duck_key;
-        this.objectMap.set(duck_key, duck_object);
-        duck_object.setStatic(true);
-        scene.add.existing(duck_object);
-        duck_object.anims.play('duck_idle', true);
+        let goose_object = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'goose', '2');
+        let goose_key = 'map_object_goose';
+        goose_object.body.label = goose_key;
+        this.objectMap.set(goose_key, goose_object);
+        goose_object.setStatic(true);
+        scene.add.existing(goose_object);
+        goose_object.anims.play('goose_idle', true);
         console.log(this.objectMap);
     }
 

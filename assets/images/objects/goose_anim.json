@@ -1,65 +1,65 @@
 {
     "anims": [
         {
-            "key": "duck_idle",
+            "key": "goose_idle",
             "type": "frames",
             "repeat": -1,
             "frameRate": 12,
             "frames": [
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "2"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "3"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "4"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "5"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "6"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "7"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "8"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "9"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "10"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "11"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "12"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "13"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "14"
                 },
                 {
-                    "key": "duck",
+                    "key": "goose",
                     "frame": "15"
                 }
             ]
