@@ -14,7 +14,7 @@ export default class MapObjects {
         scene.load.tilemapTiledJSON('map', 'assets/images/map/cat-dimension.json');
         scene.load.atlas('objects', 'assets/images/objects/objects.png', 'assets/images/objects/objects_atlas.json');
 
-        // Duck
+        // Goose 
         scene.load.atlas('goose', 'assets/images/objects/goose.png', 'assets/images/objects/goose_atlas.json');
         scene.load.animation('goose_anim', 'assets/images/objects/goose_anim.json');
     }
@@ -38,7 +38,6 @@ export default class MapObjects {
         this.addObjectToMap(scene, { x: 110, y: 90, collide: true, objectKey: "bath_tub" });
         this.addObjectToMap(scene, { x: 105, y: 110, collide: true, objectKey: "toilet_side" });
         this.addObjectToMap(scene, { x: 145, y: 90, collide: true, objectKey: "sink" });
-        this.addObjectToMap(scene, { x: 115, y: 85, collide: true, objectKey: "rubber_duck" });
 
         // Kitchen
         this.addObjectToMap(scene, { x: 200, y: 150, collide: true, objectKey: "kitchen_counter" });
@@ -51,7 +50,7 @@ export default class MapObjects {
         this.addObjectToMap(scene, { x: 200, y: 58, collide: true, objectKey: "sofa_s_back" })
         this.addObjectToMap(scene, { x: 240, y: 18, collide: true, objectKey: "sofa_s_front" })
         this.addObjectToMap(scene, { x: 210, y: 18, collide: true, objectKey: "coffee_table" })
-        this.addObjectToMap(scene, { x: 209, y: 15, collide: true, objectKey: "fish_bowl" })
+        this.addObjectToMap(scene, { x: 209, y: 18, collide: true, objectKey: "fish_bowl" })
 
         // Bathroom Hallway
         this.addObjectToMap(scene, { x: 240, y: 110, collide: true, objectKey: "iron_table" });
@@ -67,14 +66,19 @@ export default class MapObjects {
         // Dining Hallway
         this.addObjectToMap(scene, { x: 60, y: 100, collide: true, objectKey: "record_player" });
 
-        // Duck
-        let goose_object = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'goose', '2');
-        let goose_key = 'map_object_goose';
-        goose_object.body.label = goose_key;
-        this.objectMap.set(goose_key, goose_object);
-        goose_object.setStatic(true);
-        scene.add.existing(goose_object);
-        goose_object.anims.play('goose_idle', true);
+        // Items
+        this.addObjectToMap(scene, { x: 230, y: 205, collide: true, objectKey: "bone" });
+        this.addObjectToMap(scene, { x: 115, y: 85, collide: true, objectKey: "rubber_duck" });
+        this.addObjectToMap(scene, { x: 30, y: 192, collide: true, objectKey: "coffee_cup" });
+
+        // Goose 
+        let gooseObject = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'goose','2');
+        let gooseKey = 'map_object_goose';
+        gooseObject.body.label = gooseKey;
+        this.objectMap.set(gooseKey, gooseObject);
+        gooseObject.setStatic(true);
+        scene.add.existing(gooseObject);
+        gooseObject.anims.play('goose_idle', true);
         console.log(this.objectMap);
     }
 
