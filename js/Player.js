@@ -21,7 +21,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         scene.load.animation('player_lily_anim', 'assets/images/player/player_lily_anim.json');
     }
 
-    update() {
+    update(scene) {
         const speed = 2.5;
         let playerVelocity = new Phaser.Math.Vector2();
         let playerAnimation = "idle"
@@ -37,8 +37,9 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         } else if (this.inputKeys.down.isDown) {
             playerVelocity.y = 1;
             playerAnimation = "walk_down";
-        } else {
-            playerAnimation = "idle";
+        } else if(this.inputKeys.enter.isDown){
+            playerVelocity.y = 0;
+            playerAnimation = "walk_up";
         }
         playerVelocity.normalize();
         playerVelocity.scale(speed);
