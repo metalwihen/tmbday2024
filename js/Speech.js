@@ -1,5 +1,6 @@
 
 // Ref: https://codepen.io/rexrainbow/pen/ExZLoWL
+// Meow audio Source: https://pixabay.com/sound-effects/search/meow/?duration=0-30
 
 const COLOR_PRIMARY = 0x6B8799;
 const COLOR_LIGHT = 0xA5BBC7;
@@ -17,9 +18,15 @@ export default class Speech {
         });
         scene.load.image('nextPage', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/images/arrow-down-left.png');
         scene.load.bitmapFont('gothic', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/fonts/gothic.png', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/fonts/gothic.xml');
+        scene.load.audio('meow1', 'assets/audio/meow1.mp3');
+        scene.load.audio('meow2', 'assets/audio/meow2.mp3');
+        scene.load.audio('meow3', 'assets/audio/meow3.mp3');
     }
 
     create(scene) {
+        this.meow1= scene.sound.add('meow1');
+        this.meow2= scene.sound.add('meow2');
+        this.meow3= scene.sound.add('meow3');
         this.textbox = createTextBox(scene);
         this.hide();
     }
@@ -32,8 +39,9 @@ export default class Speech {
         this.showing = true;
         this.textbox.visible = true;
 
-        console.log("Showing "+text);
+        console.log("Showing " + text);
         this.textbox.start(text, 50);
+        this.playSound();
     }
 
     hide() {
@@ -59,6 +67,17 @@ export default class Speech {
             textbox.typeNextPage();
         }
     }
+
+    playSound() {
+        return; // TODO: Remove after development
+        let random = Math.floor(Math.random() * 3);
+        switch(random){
+            case 0: this.meow1.play(); break;
+            case 1: this.meow2.play(); break;
+            case 2: this.meow3.play(); break;
+        }
+    }
+
 }
 
 var createTextBox = function (scene) {
@@ -72,7 +91,7 @@ var createTextBox = function (scene) {
         background: scene.rexUI.add.roundRectangle(0, 0, 2, 2, 10, COLOR_PRIMARY)
             .setStrokeStyle(2, COLOR_LIGHT),
 
-        icon: null, 
+        icon: null,
 
         text: scene.add.bitmapText(0, 0, 'gothic').setFontSize(12).setMaxWidth(wrapWidth),
 
