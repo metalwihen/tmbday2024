@@ -45,6 +45,9 @@ export default class MainScene extends Phaser.Scene {
     this.speechQueue.enqueue("Help me move! If you tap 'S', I go down");
     this.speechQueue.enqueue("Meo-awesome! 'WASD' for movement");
     this.speechQueue.enqueue("We did it! You now know meow-movement");
+
+    // Player Interactions with objects
+    this.onMeetMapObject(this.player.playerSensor);
   }
 
   update() {
@@ -55,6 +58,18 @@ export default class MainScene extends Phaser.Scene {
     }
     this.player.update(this);
     this.speech.update(this);
+  }
+
+  onMeetMapObject(playerCollider) {
+    this.matterCollision.addOnCollideStart({
+      objectA: [playerCollider],
+      callback: other => {
+        if (other.bodyB.label.startsWith("map_object")) {
+          console.log("START COLLISION" + other.bodyB.label);
+        }
+      },
+      context: this,
+    });
   }
 
 }

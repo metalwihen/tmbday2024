@@ -5,9 +5,10 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         super(scene.matter.world, x, y, texture, frame);
         this.scene.add.existing(this);
 
-        const {Body, Bodies} = Phaser.Physics.Matter.Matter;
-        var playerCollider = Bodies.circle(this.x, this.y,3, {isSensor: false, label: "playerCollider"});
-        var playerSensor = Bodies.circle(this.x, this.y, 12, {isSensor: true, label: "playerSensor"});
+        const { Body, Bodies } = Phaser.Physics.Matter.Matter;
+        var playerCollider = Bodies.circle(this.x, this.y, 3, { isSensor: false, label: "playerCollider" });
+        var playerSensor = Bodies.circle(this.x, this.y, 12, { isSensor: true, label: "playerSensor" });
+        this.playerSensor = playerSensor;
         const compoundBody = Body.create({
             parts: [playerCollider, playerSensor],
             frictionAir: 0.35,
@@ -37,7 +38,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         } else if (this.inputKeys.down.isDown) {
             playerVelocity.y = 1;
             playerAnimation = "walk_down";
-        } else if(this.inputKeys.enter.isDown){
+        } else if (this.inputKeys.enter.isDown) {
             playerVelocity.y = 0;
             playerAnimation = "walk_up";
         }

@@ -1,6 +1,6 @@
 
 // Ref: https://codepen.io/rexrainbow/pen/ExZLoWL
-// Meow audio Source: https://pixabay.com/sound-effects/search/meow/?duration=0-30
+// Meow audio Source: https://pixabay.com/sound-effects/search/meow/?duration=0-30 & https://mixkit.co/free-sound-effects/cat/
 
 const COLOR_PRIMARY = 0x6B8799;
 const COLOR_LIGHT = 0xA5BBC7;
@@ -18,7 +18,7 @@ export default class Speech {
         });
         scene.load.image('nextPage', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/images/arrow-down-left.png');
         scene.load.bitmapFont('gothic', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/fonts/gothic.png', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/fonts/gothic.xml');
-        scene.load.audio('meow1', 'assets/audio/meow1.mp3');
+        scene.load.audio('meow1', 'assets/audio/meow1.wav');
         scene.load.audio('meow2', 'assets/audio/meow2.mp3');
         scene.load.audio('meow3', 'assets/audio/meow3.mp3');
     }
