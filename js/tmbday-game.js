@@ -8,7 +8,7 @@ const config = {
   parent: 'tmbday-game',
   scene: [MainScene],
   scale: {
-    zoom: 2,
+    zoom: 3,
   },
   physics: {
     default: 'matter',
