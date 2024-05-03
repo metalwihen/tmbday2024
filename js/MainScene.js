@@ -1,18 +1,25 @@
 import Player from "./Player.js";
 import Speech from "./Speech.js";
+import TheEnd from "./TheEnd.js";
 import Queue from "./Queue.js";
 import MapObjects from "./MapObjects.js";
+
+const STAGE_BEG = 1
+const STAGE_END = 5
 
 export default class MainScene extends Phaser.Scene {
   constructor() {
     super("MainScene");
+    this.stage = STAGE_BEG;
   }
+
 
   preload() {
     console.log("preload");
     MapObjects.preload(this);
     Player.preload(this);
     Speech.preload(this);
+    TheEnd.preload(this);
   }
 
   create() {
@@ -40,18 +47,24 @@ export default class MainScene extends Phaser.Scene {
     });
     this.speech.create(this);
 
-    // Welcome
-    this.speechQueue.enqueue("Meow! Tap 'Enter' if you can hear me?")
-    this.speechQueue.enqueue("Help me move! If you tap 'S', I go down");
-    this.speechQueue.enqueue("Meo-awesome! 'WASD' for movement");
-    this.speechQueue.enqueue("We did it! You now know meow-movement");
+    // The End
+    this.theEnd = new TheEnd();
+    this.theEnd.create(this);
 
     // Player Interactions with objects
     this.onMeetMapObject(this.player.playerSensor);
+
+    // Welcome
+    // this.stage1_beginning()
+    this.stage5_victory()
   }
 
   update() {
     console.log("update");
+    if (this.stage == STAGE_END) {
+      return;
+    }
+
     if (!this.speech.isShowing() && !this.speechQueue.isEmpty) {
       this.speech.show(this.speechQueue.dequeue());
     }
@@ -63,10 +76,12 @@ export default class MainScene extends Phaser.Scene {
     this.matterCollision.addOnCollideStart({
       objectA: [playerCollider],
       callback: other => {
-        let otherObjectLabel= other.bodyB.label;
+        let otherObjectLabel = other.bodyB.label;
         if (otherObjectLabel.startsWith("map_object")) {
           console.log("START COLLISION" + other.bodyB.label);
-          if(otherObjectLabel== "map_object_fish_bowl"){
+
+          // TODO: 
+          if (otherObjectLabel == "map_object_fish_bowl") {
             let otherObject = this.mapObjects.getObjectMap().get("map_object_fish_bowl");
             console.log(otherObject);
             otherObject.setPosition(180, 220);
@@ -76,6 +91,33 @@ export default class MainScene extends Phaser.Scene {
       context: this,
     });
   }
+
+  stage1_beginning() {
+    this.speechQueue.enqueue("Meow! Tap 'Enter' if you can hear me?")
+    this.speechQueue.enqueue("Help me move! If you tap 'S', I go down");
+    this.speechQueue.enqueue("Meo-awesome! 'WASD' for movement");
+    this.speechQueue.enqueue("We did it! You now know meow-movement");
+
+  }
+
+  stage2_enterHouse() {
+
+  }
+
+  stage3_goldFishFirstInteraction() {
+
+  }
+
+  stage4_itemHunt() {
+
+  }
+
+  stage5_victory() {
+    this.stage = STAGE_END;
+    this.theEnd.show();
+  }
+
+  // TODO: Easter eggs
 
 }
 
