@@ -1,0 +1,68 @@
+{
+    "anims": [
+        {
+            "key": "duck_idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "duck",
+                    "frame": "2"
+                },
+                {
+                    "key": "duck",
+                    "frame": "3"
+                },
+                {
+                    "key": "duck",
+                    "frame": "4"
+                },
+                {
+                    "key": "duck",
+                    "frame": "5"
+                },
+                {
+                    "key": "duck",
+                    "frame": "6"
+                },
+                {
+                    "key": "duck",
+                    "frame": "7"
+                },
+                {
+                    "key": "duck",
+                    "frame": "8"
+                },
+                {
+                    "key": "duck",
+                    "frame": "9"
+                },
+                {
+                    "key": "duck",
+                    "frame": "10"
+                },
+                {
+                    "key": "duck",
+                    "frame": "11"
+                },
+                {
+                    "key": "duck",
+                    "frame": "12"
+                },
+                {
+                    "key": "duck",
+                    "frame": "13"
+                },
+                {
+                    "key": "duck",
+                    "frame": "14"
+                },
+                {
+                    "key": "duck",
+                    "frame": "15"
+                }
+            ]
+        }
+    ]
+}

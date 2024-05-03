@@ -9,6 +9,10 @@ export default class MapObjects {
         scene.load.image('tiles', 'assets/images/map/TopDownHouse_FloorsAndWalls.png');
         scene.load.tilemapTiledJSON('map', 'assets/images/map/cat-dimension.json');
         scene.load.atlas('objects', 'assets/images/objects/objects.png', 'assets/images/objects/objects_atlas.json');
+
+        // Duck
+        scene.load.atlas('duck', 'assets/images/objects/duck.png', 'assets/images/objects/duck_atlas.json');
+        scene.load.animation('duck_anim', 'assets/images/objects/duck_anim.json');
     }
 
     getObjectMap() {
@@ -25,7 +29,7 @@ export default class MapObjects {
         layer1.setCollisionByProperty({ collide: true });
         this.layer1 = layer1;
         scene.matter.world.convertTilemapLayer(layer1);
-
+        
         // Bathroom
         this.addObjectToMap(scene, { x: 110, y: 90, collide: true, objectKey: "bath_tub" });
         this.addObjectToMap(scene, { x: 105, y: 110, collide: true, objectKey: "toilet_side" });
@@ -59,7 +63,18 @@ export default class MapObjects {
         // Dining Hallway
         this.addObjectToMap(scene, { x: 60, y: 100, collide: true, objectKey: "record_player" });
 
+        // Duck
+        let duck_object = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'duck', '2');
+        let duck_key = 'map_object_duck';
+        duck_object.body.label = duck_key;
+        this.objectMap.set(duck_key, duck_object);
+        duck_object.setStatic(true);
+        scene.add.existing(duck_object);
+        duck_object.anims.play('duck_idle', true);
         console.log(this.objectMap);
+    }
+
+    update(scene){
     }
 
     getTileLayer() {

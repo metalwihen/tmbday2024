@@ -55,8 +55,8 @@ export default class MainScene extends Phaser.Scene {
     this.onMeetMapObject(this.player.playerSensor);
 
     // Welcome
-    // this.stage1_beginning()
-    this.stage5_victory()
+    this.stage1_beginning()
+    // this.stage5_victory()
   }
 
   update() {
@@ -70,6 +70,7 @@ export default class MainScene extends Phaser.Scene {
     }
     this.player.update(this);
     this.speech.update(this);
+    this.mapObjects.update(this);
   }
 
   onMeetMapObject(playerCollider) {
