@@ -69,7 +69,7 @@ export default class MapObjects {
         // Items
         this.addObjectToMap(scene, { x: 230, y: 205, collide: true, objectKey: "bone" });
         this.addObjectToMap(scene, { x: 115, y: 85, collide: true, objectKey: "rubber_duck" });
-        this.addObjectToMap(scene, { x: 30, y: 192, collide: true, objectKey: "coffee_cup" });
+        this.addObjectToMap(scene, { x: 35, y: 192, collide: true, objectKey: "coffee_cup" });
 
         // Goose 
         let gooseObject = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'goose','2');
@@ -84,7 +84,7 @@ export default class MapObjects {
 
     update(scene){
     }
-
+q
     getTileLayer() {
         return this.layer1;
     }

@@ -38,7 +38,7 @@ export default class TheEnd {
 var createTextBox = function (scene) {
     var x = 10;
     var y = 70;
-    var wrapWidth = 246;
+    var wrapWidth = 210;
     var textBox = scene.rexUI.add.textBox({
         x: x,
         y: y,
@@ -54,7 +54,7 @@ var createTextBox = function (scene) {
 
         space: {
             left: 20,
-            right: 70,
+            right: 20,
             top: 20,
             bottom: 20,
             icon: 0,

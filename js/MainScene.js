@@ -62,7 +62,8 @@ export default class MainScene extends Phaser.Scene {
 
 
     // TODO - fast forward
-    this.stage = STAGE_ITEM_HUNT;
+    this.stage = STAGE_END;
+    this.stage_ending();
 
   }
 
@@ -112,7 +113,6 @@ export default class MainScene extends Phaser.Scene {
             } else if (otherObjectLabel == "map_object_goose") {
               this.speechQueue.enqueue("Hmmm... Maybe there's something at home to scare it away!");
             } else if (otherObjectLabel == "map_object_coffee_cup") {
-              this.moveItemOnHunt("map_object_coffee_cup");
               this.stage_ending();
             } else if (otherObjectLabel == "map_object_fridge") {
               this.speechQueue.enqueue("Someone left the fridge door open. Everything stinks. There's nothing here");
@@ -139,6 +139,8 @@ export default class MainScene extends Phaser.Scene {
 
   stage_ending() {
     this.stage = STAGE_END;
+    this.hideGoose()
+    this.speech.hide();
     this.theEnd.show();
   }
 
@@ -147,9 +149,12 @@ export default class MainScene extends Phaser.Scene {
     otherObject.setPosition(168, 45);
   }
 
-  hideGoose(objectKey) {
-    let otherObject = this.mapObjects.getObjectMap().get(objectKey);
-    otherObject.setPosition(168, 45);
+  hideGoose() {
+    let coffeeObject= this.mapObjects.getObjectMap().get("map_object_coffee_cup");
+    coffeeObject.setPosition(168, 33);
+
+    let gooseObject = this.mapObjects.getObjectMap().get("map_object_goose");
+    gooseObject.setPosition(-100, -100);
   }
   // TODO: Easter eggs
 
