@@ -1538,11 +1538,34 @@
                 }, 
                 {
                  "id":79,
+                 "objectgroup":
+                    {
+                     "draworder":"index",
+                     "id":2,
+                     "name":"",
+                     "objects":[
+                            {
+                             "height":1,
+                             "id":1,
+                             "name":"bottom",
+                             "rotation":0,
+                             "type":"",
+                             "visible":true,
+                             "width":16,
+                             "x":0,
+                             "y":15
+                            }],
+                     "opacity":1,
+                     "type":"objectgroup",
+                     "visible":true,
+                     "x":0,
+                     "y":0
+                    },
                  "properties":[
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 },
             
@@ -3527,19 +3550,6 @@
                 }],
          "tilewidth":16,
          "transparentcolor":"#000000"
-        }, 
-        {
-         "columns":18,
-         "firstgid":163,
-         "image":"TopDownHouse_FloorsAndWalls.png",
-         "imageheight":144,
-         "imagewidth":288,
-         "margin":0,
-         "name":"TopDownHouse_FloorsAndWalls",
-         "spacing":0,
-         "tilecount":162,
-         "tileheight":16,
-         "tilewidth":16
         }],
  "tilewidth":16,
  "type":"map",

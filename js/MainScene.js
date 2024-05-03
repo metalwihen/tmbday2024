@@ -23,14 +23,6 @@ export default class MainScene extends Phaser.Scene {
     layer1.setCollisionByProperty({ collide: true });
     this.matter.world.convertTilemapLayer(layer1);
 
-    this.player = new Player({ scene: this, x: 5, y: 5, texture: 'player_lily', frame: 'cat_sleep_1' })
-    this.player.inputKeys = this.input.keyboard.addKeys({
-      up: Phaser.Input.Keyboard.KeyCodes.W,
-      down: Phaser.Input.Keyboard.KeyCodes.S,
-      left: Phaser.Input.Keyboard.KeyCodes.A,
-      right: Phaser.Input.Keyboard.KeyCodes.D,
-    })
-
     // Bathroom
     this.addObjectToMap({x: 110, y: 90, objectKey: "bath_tub"});
     this.addObjectToMap({x: 105, y: 110, objectKey: "toilet_side"});
@@ -63,6 +55,16 @@ export default class MainScene extends Phaser.Scene {
 
     // Dining Hallway
    this.addObjectToMap({x: 60, y: 100, objectKey: "record_player"});
+
+   // Player
+   this.player = new Player({ scene: this, x: 5, y: 5, texture: 'player_lily', frame: 'cat_sleep_1' })
+   this.player.inputKeys = this.input.keyboard.addKeys({
+     up: Phaser.Input.Keyboard.KeyCodes.W,
+     down: Phaser.Input.Keyboard.KeyCodes.S,
+     left: Phaser.Input.Keyboard.KeyCodes.A,
+     right: Phaser.Input.Keyboard.KeyCodes.D,
+   })
+
   }
 
   update() {
