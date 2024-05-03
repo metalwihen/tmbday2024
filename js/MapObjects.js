@@ -68,15 +68,15 @@ export default class MapObjects {
 
         // Items
         this.addObjectToMap(scene, { x: 230, y: 205, collide: true, objectKey: "bone" });
+        this.addObjectToMap(scene, { x: 215, y: 120, collide: true, objectKey: "clothes_hanger" });
         this.addObjectToMap(scene, { x: 120, y: 100, collide: true, objectKey: "rubber_duck" });
-        this.addObjectToMap(scene, { x: 35, y: 192, collide: true, objectKey: "coffee_cup" });
         this.addObjectToMap(scene, { x: 68, y: 118, collide: true, objectKey: "telephone" });
         this.addObjectToMap(scene, { x: 140, y: 150, collide: true, objectKey: "candle" });
         this.addObjectToMap(scene, { x: 21, y: 8, collide: true, objectKey: "book" });
-        this.addObjectToMap(scene, { x: 215, y: 120, collide: true, objectKey: "clothes_hanger" });
         this.addObjectToMap(scene, { x: 25, y: 70, collide: true, objectKey: "plant_pot" });
         this.addObjectToMap(scene, { x: 170, y: 210, collide: true, objectKey: "drinking_bowl" });
         this.addObjectToMap(scene, { x: 110, y: 225, collide: true, objectKey: "food" });
+        this.addObjectToMap(scene, { x: 35, y: 192, collide: true, objectKey: "coffee_cup" });
 
         // Goose 
         let gooseObject = new Phaser.Physics.Matter.Sprite(scene.matter.world, 170, 25, 'goose','2');
