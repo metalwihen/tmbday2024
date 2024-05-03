@@ -22,6 +22,8 @@ export default class MainScene extends Phaser.Scene {
     Player.preload(this);
     Speech.preload(this);
     TheEnd.preload(this);
+
+    this.load.audio('quack', 'assets/audio/quack.mp3');
   }
 
   create() {
@@ -48,6 +50,7 @@ export default class MainScene extends Phaser.Scene {
       enter: Phaser.Input.Keyboard.KeyCodes.ENTER,
     });
     this.speech.create(this);
+    this.quack = this.sound.add('quack');
 
     // The End
     this.theEnd = new TheEnd();
@@ -97,7 +100,8 @@ export default class MainScene extends Phaser.Scene {
               this.speechQueue.enqueue("The fish are scared. You need to get that goose out of here!");
               this.stage = STAGE_ITEM_HUNT;
             } else if (otherObjectLabel == "map_object_goose") {
-              this.speechQueue.enqueue("That goose is scary!")
+              this.speechQueue.enqueue("That goose is scary!");
+              this.quack.play();
             }
 
           } else if (this.stage == STAGE_ITEM_HUNT) { // STAGE 3
@@ -107,6 +111,7 @@ export default class MainScene extends Phaser.Scene {
               this.speechQueue.enqueue("\"Hurry!\", says the fish.");
             } else if (otherObjectLabel == "map_object_goose") {
               this.speechQueue.enqueue("Hmmm... Maybe there's something at home to scare it away!");
+              this.quack.play();
             } else if (otherObjectLabel == "map_object_coffee_cup") {
               this.stage_ending();
 
