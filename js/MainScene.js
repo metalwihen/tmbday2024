@@ -61,7 +61,7 @@ export default class MainScene extends Phaser.Scene {
     this.addObjectToMap({ x: 60, y: 100, objectKey: "record_player" });
 
     // Player
-    this.player = new Player({ scene: this, x: 5, y: 5, texture: 'player_lily', frame: 'cat_sleep_1' })
+    this.player = new Player({ scene: this, x: 8, y: 5, texture: 'player_lily', frame: 'cat_sleep_1' })
     this.player.inputKeys = this.input.keyboard.addKeys({
       up: Phaser.Input.Keyboard.KeyCodes.W,
       down: Phaser.Input.Keyboard.KeyCodes.S,
@@ -80,18 +80,14 @@ export default class MainScene extends Phaser.Scene {
 
     // Welcome
     this.speechQueue.enqueue("Meow! Tap 'Enter' if you can hear me?")
-    this.speechQueue.enqueue("Meo-awesome! If you tap A, I go left");
-    this.speechQueue.enqueue("Tap D and I go right");
-    this.speechQueue.enqueue("Tap W and I go up");
-    this.speechQueue.enqueue("Tap S, I go down");
+    this.speechQueue.enqueue("Help me move! If you tap 'S', I go down");
+    this.speechQueue.enqueue("Meo-awesome! 'WASD' for movement");
     this.speechQueue.enqueue("We did it! You now know meow-movement");
   }
 
   update() {
     console.log("update");
     if (!this.speech.isShowing() && !this.speechQueue.isEmpty) {
-      console.log("show?" + this.speech.isShowing());
-      console.log("show?" + this.speechQueue.peek());
       this.speech.show(this.speechQueue.dequeue());
     }
     this.player.update(this);

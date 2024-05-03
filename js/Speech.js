@@ -72,7 +72,7 @@ var createTextBox = function (scene) {
         background: scene.rexUI.add.roundRectangle(0, 0, 2, 2, 10, COLOR_PRIMARY)
             .setStrokeStyle(2, COLOR_LIGHT),
 
-        icon: null, // scene.add.image(0, 0, 'fish_bowl').setTint(COLOR_LIGHT).setVisible(true),
+        icon: null, 
 
         text: scene.add.bitmapText(0, 0, 'gothic').setFontSize(12).setMaxWidth(wrapWidth),
 
