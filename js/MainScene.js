@@ -138,10 +138,6 @@ export default class MainScene extends Phaser.Scene {
             } else if (otherObjectLabel == "map_object_food") {
               this.speechQueue.enqueue("MINE!");
               this.moveItemOnHunt("map_object_food");
-
-              // Easter Eggs
-            } else if (otherObjectLabel == "map_object_fridge") {
-              this.speechQueue.enqueue("Someone left the fridge door open. Smelly.");
             }
 
           } else if (this.stage == STAGE_END) {
