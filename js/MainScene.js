@@ -58,13 +58,7 @@ export default class MainScene extends Phaser.Scene {
 
     // Welcome
     this.stage = STAGE_BEG;
-    // this.stage_beginning() // TODO
-
-
-    // TODO - fast forward
-    this.stage = STAGE_END;
-    this.stage_ending();
-
+    this.stage_beginning();
   }
 
   update() {
@@ -108,17 +102,46 @@ export default class MainScene extends Phaser.Scene {
 
           } else if (this.stage == STAGE_ITEM_HUNT) { // STAGE 3
 
+            // Core
             if (otherObjectLabel == "map_object_fish_bowl") {
               this.speechQueue.enqueue("\"Hurry!\", says the fish.");
             } else if (otherObjectLabel == "map_object_goose") {
               this.speechQueue.enqueue("Hmmm... Maybe there's something at home to scare it away!");
             } else if (otherObjectLabel == "map_object_coffee_cup") {
               this.stage_ending();
-            } else if (otherObjectLabel == "map_object_fridge") {
-              this.speechQueue.enqueue("Someone left the fridge door open. Everything stinks. There's nothing here");
+
+              // Other Objects
             } else if (otherObjectLabel == "map_object_bone") {
               this.speechQueue.enqueue("The bone just made it angry.");
               this.moveItemOnHunt("map_object_bone")
+            } else if (otherObjectLabel == "map_object_rubber_duck") {
+              this.speechQueue.enqueue("Now there are two birds scaring the fish.");
+              this.moveItemOnHunt("map_object_rubber_duck");
+            } else if (otherObjectLabel == "map_object_telephone") {
+              this.speechQueue.enqueue("Did it just call his friends over?");
+              this.moveItemOnHunt("map_object_telephone");
+            } else if (otherObjectLabel == "map_object_candle") {
+              this.speechQueue.enqueue("You'd think fire would work but it didn't.");
+              this.moveItemOnHunt("map_object_candle");
+            } else if (otherObjectLabel == "map_object_book") {
+              this.speechQueue.enqueue("The pen may be mightier than the sword but useless against the geese.");
+              this.moveItemOnHunt("map_object_book");
+            } else if (otherObjectLabel == "map_object_clothes_hanger") {
+              this.speechQueue.enqueue("Well, that didn't work.");
+              this.moveItemOnHunt("map_object_clothes_hanger");
+            } else if (otherObjectLabel == "map_object_plant_pot") {
+              this.speechQueue.enqueue("Meh.");
+              this.moveItemOnHunt("map_object_plant_pot");
+            } else if (otherObjectLabel == "map_object_drinking_bowl") {
+              this.speechQueue.enqueue("Lick. Lick. Lick. Thanks, I was thirsty. The goose isn't.");
+              this.moveItemOnHunt("map_object_drinking_bowl");
+            } else if (otherObjectLabel == "map_object_food") {
+              this.speechQueue.enqueue("MINE!");
+              this.moveItemOnHunt("map_object_food");
+
+              // Easter Eggs
+            } else if (otherObjectLabel == "map_object_fridge") {
+              this.speechQueue.enqueue("Someone left the fridge door open. Smelly.");
             }
 
           } else if (this.stage == STAGE_END) {
@@ -147,16 +170,16 @@ export default class MainScene extends Phaser.Scene {
   moveItemOnHunt(objectKey) {
     let otherObject = this.mapObjects.getObjectMap().get(objectKey);
     otherObject.setPosition(168, 45);
+    otherObject.setCollisionCategory(null);
   }
 
   hideGoose() {
-    let coffeeObject= this.mapObjects.getObjectMap().get("map_object_coffee_cup");
+    let coffeeObject = this.mapObjects.getObjectMap().get("map_object_coffee_cup");
     coffeeObject.setPosition(168, 33);
 
     let gooseObject = this.mapObjects.getObjectMap().get("map_object_goose");
     gooseObject.setPosition(-100, -100);
   }
-  // TODO: Easter eggs
 
 }
 
