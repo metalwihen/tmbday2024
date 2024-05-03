@@ -1,4 +1,8 @@
 
+// Ref: https://penzilla.itch.io/top-down-retro-interior
+// Ref: https://shubibubi.itch.io/cozy-interior
+// Ref: https://rascarcapack.itch.io/pixel-geese-anim-spritesheet
+
 export default class MapObjects {
 
     constructor() {
