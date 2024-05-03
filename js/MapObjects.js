@@ -38,7 +38,7 @@ export default class MapObjects {
         this.addObjectToMap(scene, { x: 110, y: 90, collide: true, objectKey: "bath_tub" });
         this.addObjectToMap(scene, { x: 105, y: 110, collide: true, objectKey: "toilet_side" });
         this.addObjectToMap(scene, { x: 145, y: 90, collide: true, objectKey: "sink" });
-        this.addObjectToMap(scene, { x: 115, y: 85, collide: true, objectKey: "duck" });
+        this.addObjectToMap(scene, { x: 115, y: 85, collide: true, objectKey: "rubber_duck" });
 
         // Kitchen
         this.addObjectToMap(scene, { x: 200, y: 150, collide: true, objectKey: "kitchen_counter" });
