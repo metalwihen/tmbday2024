@@ -4,8 +4,10 @@ import TheEnd from "./TheEnd.js";
 import Queue from "./Queue.js";
 import MapObjects from "./MapObjects.js";
 
-const STAGE_BEG = 1
-const STAGE_END = 5
+const STAGE_BEG = 1;
+const STAGE_FISHY = 2;
+const STAGE_ITEM_HUNT = 3;
+const STAGE_END = 5;
 
 export default class MainScene extends Phaser.Scene {
   constructor() {
@@ -55,8 +57,13 @@ export default class MainScene extends Phaser.Scene {
     this.onMeetMapObject(this.player.playerSensor);
 
     // Welcome
-    this.stage1_beginning()
-    // this.stage5_victory()
+    this.stage = STAGE_BEG;
+    // this.stage_beginning() // TODO
+
+
+    // TODO - fast forward
+    this.stage = STAGE_ITEM_HUNT;
+
   }
 
   update() {
@@ -81,11 +88,41 @@ export default class MainScene extends Phaser.Scene {
         if (otherObjectLabel.startsWith("map_object")) {
           console.log("START COLLISION" + other.bodyB.label);
 
-          // TODO: 
-          if (otherObjectLabel == "map_object_fish_bowl") {
-            let otherObject = this.mapObjects.getObjectMap().get("map_object_fish_bowl");
-            console.log(otherObject);
-            otherObject.setPosition(180, 220);
+
+          if (this.stage == STAGE_BEG) { // STAGE 1
+
+            if (otherObjectLabel == "map_object_bone") {
+              this.stage = STAGE_FISHY;
+              this.speechQueue.enqueue("Something smells fishy...");
+            }
+
+          } else if (this.stage == STAGE_FISHY) { // STAGE 2
+
+            if (otherObjectLabel == "map_object_fish_bowl") {
+              this.speechQueue.enqueue("The fish are scared. You need to get that goose out of here!");
+              this.stage = STAGE_ITEM_HUNT;
+            } else if (otherObjectLabel == "map_object_goose") {
+              this.speechQueue.enqueue("That goose is scary!")
+            }
+
+          } else if (this.stage == STAGE_ITEM_HUNT) { // STAGE 3
+
+            if (otherObjectLabel == "map_object_fish_bowl") {
+              this.speechQueue.enqueue("\"Hurry!\", says the fish.");
+            } else if (otherObjectLabel == "map_object_goose") {
+              this.speechQueue.enqueue("Hmmm... Maybe there's something at home to scare it away!");
+            } else if (otherObjectLabel == "map_object_coffee_cup") {
+              this.moveItemOnHunt("map_object_coffee_cup");
+              this.stage_ending();
+            } else if (otherObjectLabel == "map_object_fridge") {
+              this.speechQueue.enqueue("Someone left the fridge door open. Everything stinks. There's nothing here");
+            } else if (otherObjectLabel == "map_object_bone") {
+              this.speechQueue.enqueue("The bone just made it angry.");
+              this.moveItemOnHunt("map_object_bone")
+            }
+
+          } else if (this.stage == STAGE_END) {
+            this.stage_ending();
           }
         }
       },
@@ -93,31 +130,27 @@ export default class MainScene extends Phaser.Scene {
     });
   }
 
-  stage1_beginning() {
+  stage_beginning() {
     this.speechQueue.enqueue("Meow! Tap 'Enter' if you can hear me?")
     this.speechQueue.enqueue("Help me move! If you tap 'S', I go down");
-    this.speechQueue.enqueue("Meo-awesome! 'WASD' for movement");
-    this.speechQueue.enqueue("We did it! You now know meow-movement");
-
+    this.speechQueue.enqueue("Meo-awesome! 'WASD' for movement.");
+    this.speechQueue.enqueue("You now know meow-movement");
   }
 
-  stage2_enterHouse() {
-
-  }
-
-  stage3_goldFishFirstInteraction() {
-
-  }
-
-  stage4_itemHunt() {
-
-  }
-
-  stage5_victory() {
+  stage_ending() {
     this.stage = STAGE_END;
     this.theEnd.show();
   }
 
+  moveItemOnHunt(objectKey) {
+    let otherObject = this.mapObjects.getObjectMap().get(objectKey);
+    otherObject.setPosition(168, 45);
+  }
+
+  hideGoose(objectKey) {
+    let otherObject = this.mapObjects.getObjectMap().get(objectKey);
+    otherObject.setPosition(168, 45);
+  }
   // TODO: Easter eggs
 
 }

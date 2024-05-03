@@ -19,7 +19,7 @@ export default class TheEnd {
     }
 
     create(scene) {
-        let text = "YOU SAVED THE DAY!\nMeow-tastic!" + "\n&\nHAPPY BIRTHDAY SISTER!"
+        let text = "YOU SAVED THE DAY!\nLooks like the goose just wanted some coffee.\nMeow-tastic!" + "\n&\nHAPPY BIRTHDAY SISTER!"
 
         this.textbox = createTextBox(scene);
         this.textbox.visible = false;
