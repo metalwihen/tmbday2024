@@ -1,4 +1,6 @@
 import Player from "./Player.js";
+import Speech from "./Speech.js";
+import Queue from "./Queue.js";
 
 export default class MainScene extends Phaser.Scene {
   constructor() {
@@ -8,23 +10,15 @@ export default class MainScene extends Phaser.Scene {
   preload() {
     console.log("preload");
     Player.preload(this);
+    Speech.preload(this);
     this.load.image('tiles', 'assets/images/map/TopDownHouse_FloorsAndWalls.png');
     this.load.tilemapTiledJSON('map', 'assets/images/map/cat-dimension.json');
     this.load.atlas('objects', 'assets/images/objects/objects.png', 'assets/images/objects/objects_atlas.json');
 
-    this.load.scenePlugin({
-      key: 'rexuiplugin',
-      url: 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexuiplugin.min.js',
-      sceneKey: 'rexUI'
-    });
-
-    this.load.image('nextPage', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/images/arrow-down-left.png');
-    this.load.bitmapFont('gothic', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/fonts/gothic.png', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/assets/fonts/gothic.xml');
   }
 
   create() {
     console.log("create");
-
 
     const map = this.make.tilemap({ key: 'map' });
     this.map = map;
@@ -74,16 +68,34 @@ export default class MainScene extends Phaser.Scene {
       left: Phaser.Input.Keyboard.KeyCodes.A,
       right: Phaser.Input.Keyboard.KeyCodes.D,
       enter: Phaser.Input.Keyboard.KeyCodes.ENTER,
-    })
+    }, false, false);
 
+    // Speech
+    this.speechQueue = new Queue();
+    this.speech = new Speech();
+    this.speech.inputKeys = this.input.keyboard.addKeys({
+      enter: Phaser.Input.Keyboard.KeyCodes.ENTER,
+    });
+    this.speech.create(this);
 
-        createTextBox(this, 10, 10, { wrapWidth: 100,})
-            .start("Phaser is a fast, free, and fun open source HTML5 game framework that offers WebGL and Canvas rendering across desktop and mobile web browsers. Games can be compiled to iOS, Android and native apps by using 3rd party tools. You can use JavaScript or TypeScript for development.", 50);
+    // Welcome
+    this.speechQueue.enqueue("Meow! Tap 'Enter' if you can hear me?")
+    this.speechQueue.enqueue("Meo-awesome! If you tap A, I go left");
+    this.speechQueue.enqueue("Tap D and I go right");
+    this.speechQueue.enqueue("Tap W and I go up");
+    this.speechQueue.enqueue("Tap S, I go down");
+    this.speechQueue.enqueue("We did it! You now know meow-movement");
   }
 
   update() {
     console.log("update");
-    this.player.update(this)
+    if (!this.speech.isShowing() && !this.speechQueue.isEmpty) {
+      console.log("show?" + this.speech.isShowing());
+      console.log("show?" + this.speechQueue.peek());
+      this.speech.show(this.speechQueue.dequeue());
+    }
+    this.player.update(this);
+    this.speech.update(this);
   }
 
   addObjectToMap(info) {
@@ -94,72 +106,3 @@ export default class MainScene extends Phaser.Scene {
   }
 }
 
-const COLOR_PRIMARY = 0x6B8799;
-const COLOR_LIGHT = 0xA5BBC7;
-
-var createTextBox = function (scene) {
-    var x = 10;
-    var y = 210;
-    var wrapWidth = 200;
-    var textBox = scene.rexUI.add.textBox({
-            x: x,
-            y: y,
-
-            background: scene.rexUI.add.roundRectangle(0, 0, 2, 2, 10, COLOR_PRIMARY)
-                .setStrokeStyle(2, COLOR_LIGHT),
-
-            icon: null, // scene.add.image(0, 0, 'fish_bowl').setTint(COLOR_LIGHT).setVisible(true),
-
-            text: scene.add.bitmapText(0, 0, 'gothic').setFontSize(12).setMaxWidth(wrapWidth),
-
-            action: scene.add.image(0, 0, 'nextPage').setTint(COLOR_LIGHT).setVisible(false),
-
-            space: {
-                left: 4,
-                right: 4,
-                top: 2,
-                bottom: 2,
-                icon: 5,
-                text: 5,
-            },
-      
-            page: {
-                maxLines: 2
-            }
-        })
-        .setOrigin(0)
-        .layout();
-
-    textBox
-        .setInteractive()
-        .on('pointerdown', function () {
-            var icon = this.getElement('action').setVisible(false);
-            this.resetChildVisibleState(icon);
-            if (this.isTyping) {
-                this.stop(true);
-            } else {
-                this.typeNextPage();
-            }
-        }, textBox)
-        .on('pageend', function () {
-            if (this.isLastPage) {
-                return;
-            }
-
-            var icon = this.getElement('action').setVisible(true);
-            this.resetChildVisibleState(icon);
-            icon.y -= 30;
-            var tween = scene.tweens.add({
-                targets: icon,
-                y: '+=30', // '+=100'
-                ease: 'Bounce', // 'Cubic', 'Elastic', 'Bounce', 'Back'
-                duration: 500,
-                repeat: 0, // -1: infinity
-                yoyo: false
-            });
-        }, textBox)
-    //.on('type', function () {
-    //})
-
-    return textBox;
-}
