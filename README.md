@@ -4,9 +4,9 @@ Birthday game for 2024. It was built using Phaser 3 and JS.
 
 Play it here: https://metalwihen.github.io/tmbday2024/
 
-![game_start(3)](https://github.com/user-attachments/assets/3a5c7531-d921-474b-bcfc-664ef3920970)
+Game Play Video: [Link](https://mewi.notion.site/signed/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fe8582610-0b2b-4346-97d5-2c6e54388e89%2F7bc713aa-cdcb-4199-a247-93d8fccbb036%2Ftmbday2024.mov?table=block&id=1009ffc4-afd0-80c1-8df6-f99d88ca5244&spaceId=e8582610-0b2b-4346-97d5-2c6e54388e89&name=tmbday2024.mov&cache=v2)
 
-[Video Link](https://www.notion.so/mewi/Treasure-Hunt-Game-Design-eebbb18d09af462896bd24df5d137d05?pvs=4#1009ffc4afd080c18df6f99d88ca5244)
+![game_start(3)](https://github.com/user-attachments/assets/3a5c7531-d921-474b-bcfc-664ef3920970)
 
 ## Resources
 
