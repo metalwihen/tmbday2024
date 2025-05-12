@@ -47,6 +47,10 @@ export default class MainScene extends Phaser.Scene {
     this.speechQueue = new Queue();
     this.speech = new Speech();
     this.speech.inputKeys = this.input.keyboard.addKeys({
+      up: Phaser.Input.Keyboard.KeyCodes.W,
+      down: Phaser.Input.Keyboard.KeyCodes.S,
+      left: Phaser.Input.Keyboard.KeyCodes.A,
+      right: Phaser.Input.Keyboard.KeyCodes.D,
       enter: Phaser.Input.Keyboard.KeyCodes.ENTER,
     });
     this.speech.create(this);

@@ -24,9 +24,9 @@ export default class Speech {
     }
 
     create(scene) {
-        this.meow1= scene.sound.add('meow1');
-        this.meow2= scene.sound.add('meow2');
-        this.meow3= scene.sound.add('meow3');
+        this.meow1 = scene.sound.add('meow1');
+        this.meow2 = scene.sound.add('meow2');
+        this.meow3 = scene.sound.add('meow3');
         this.textbox = createTextBox(scene);
         this.hide();
     }
@@ -50,7 +50,13 @@ export default class Speech {
     }
 
     update(scene) {
-        if (Phaser.Input.Keyboard.JustDown(this.inputKeys.enter)) {
+        if (
+            Phaser.Input.Keyboard.JustDown(this.inputKeys.enter) ||
+            Phaser.Input.Keyboard.JustDown(this.inputKeys.up) ||
+            Phaser.Input.Keyboard.JustDown(this.inputKeys.down) ||
+            Phaser.Input.Keyboard.JustDown(this.inputKeys.left) ||
+            Phaser.Input.Keyboard.JustDown(this.inputKeys.right)
+        ) {
             console.log("Enter detected");
             this.next(this.textbox);
         }
@@ -71,7 +77,7 @@ export default class Speech {
     playSound() {
         // return; // TODO: Remove after development
         let random = Math.floor(Math.random() * 3);
-        switch(random){
+        switch (random) {
             case 0: this.meow1.play(); break;
             case 1: this.meow2.play(); break;
             case 2: this.meow3.play(); break;
